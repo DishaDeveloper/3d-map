@@ -1,39 +1,37 @@
-@import 'utilities/index';
-.component-3D-map {
+@import '../../scss/utilities/index';
+
+.component-3D-map{
   margin-bottom: 48px;
   position: relative;
   z-index: 1;
-  &.ios-map {
-    .leaflet-popup-close-button {
-      display: none;
-    }
-  }
-  @include desktop {
+  @include desktop{
     margin-bottom: 115px;
   }
-  #map-container {
-    padding: 0 12px;
-    @include desktop {
-      padding: 0;
+  &.ios-map{
+    .leaflet-popup-close-button {
+      display: none !important
     }
-    &.leaflet-container {
+  }
+  #map-container {
+    &.leaflet-container{
       background: $white-color;
     }
     .leaflet-container {
-      background: $color-21;
-      @include border-radius($base-button-radius);
-      @include desktop {
-        @include border-radius(0);
+      background:$color-21;
+    
+      @include mobile{
+        @include border-radius($base-button-radius);   
       }
       .leaflet-control-zoom {
         border: 0;
         gap: 8px;
         @include flex();
-        margin-top: 44px;
+        margin-top: 24px;
+        margin-left: 24px;
         flex-direction: column;
         @include desktop {
-          margin-left: 127px;
-          margin-top: 44px;
+          margin-left:40px;
+          margin-top: 40px;
         }
         a {
           border-radius: 50%;
@@ -52,11 +50,31 @@
             @include font-size($base-font-size);
           }
         }
+        .leaflet-control-zoom-in{
+          span{
+            @include font-size($font-body-24);
+            margin-top: -3px;
+            @include desktop{
+              @include font-size($font-body-24);
+              margin-top: -6px;
+            }
+          }
+        }
+        .leaflet-control-zoom-out{
+          span{
+            @include font-size($font-body-24);
+            margin-top: -3px;
+              @include desktop{
+                @include font-size($banner-40);
+                margin-top: -6px;
+              }
+          }
+        }
       }
     }
     .leaflet-popup {
-      width: 345px;
-      max-width: 345px;
+      width: 330px;
+      max-width: 330px;
       @include desktop {
         width: 500px;
         max-width: 500px;
@@ -88,60 +106,64 @@
             flex-direction: column;
             justify-content: space-between;
             width: 100%;
-            .location-text {
+            .location-text{
+             @include text-align(left);
+             .title-icon{
+              display: flex;
+              justify-content: space-between;
+             }
+            .location-title {
+              @include BebasRegular();
+              display: inline-block;
+              @include font-size($font-body-24);
+              @include line-height($line-height-32);
+              font-weight: $font-weight-normal;
               @include text-align(left);
-              .location-title {
-                @include BebasRegular();
-                display: inline-block;
-                @include font-size($font-body-24);
-                @include line-height($line-height-32);
-                font-weight: $font-weight-normal;
-                @include text-align(left);
-                letter-spacing: 1px;
-                .lang-ar & {
-                  width: 100%;
-                }
-                @include desktop {
-                  @include font-size($headline-extra-small);
-                  @include line-height($line-height-36);
-                }
+              letter-spacing: 1px;
+              .lang-ar & {
+                width: 100%;
               }
-              .location-sub-title {
-                @include DDINCondensed();
-                @include font-size($base-font-size);
-                @include line-height($font-body-line-height);
-                font-weight: $font-weight-normal;
-                color: $secondary-dark-grey;
-                margin: 0;
-                letter-spacing: 0;
-                @include text-align(left);
-                @include desktop {
-                  @include font-size($font-normal-line-height);
-                  @include line-height($line-height-26);
-                }
-              }
-              .location-description {
-                @include DDINCondensed();
-                @include font-size($base-font-size);
-                @include line-height($font-body-line-height);
-                font-weight: $font-weight-normal;
-                color: $primary-blue;
-                margin: 0;
-                margin-top: 8px;
-                letter-spacing: 0;
-                @include text-align(left);
-                @include desktop {
-                  margin-top: 14px;
-                  @include font-size($font-normal-line-height);
-                  @include line-height($line-height-26);
-                }
-                &.max-height-content {
-                  max-height: 140px;
-                  overflow-y: auto;
-                }
+              @include desktop {
+                @include font-size($headline-extra-small);
+                @include line-height($line-height-36);
               }
             }
-            .location-section {
+            .location-sub-title {
+              @include DDINCondensed();
+              @include font-size($base-font-size);
+              @include line-height($font-body-line-height);
+              font-weight: $font-weight-normal;
+              color: $secondary-dark-grey;
+              margin: 0;
+              letter-spacing: 0;
+              @include text-align(left);
+              @include desktop {
+                @include font-size($font-normal-line-height);
+                @include line-height($line-height-26);
+              }
+            }
+            .location-description {
+              @include DDINCondensed();
+              @include font-size($base-font-size);
+              @include line-height($font-body-line-height);
+              font-weight: $font-weight-normal;
+              color: $primary-blue;
+              margin: 0;
+              margin-top: 8px;
+              letter-spacing: 0;
+              @include text-align(left);
+              @include desktop {
+                margin-top: 14px;
+                @include font-size($font-normal-line-height);
+                @include line-height($line-height-26);
+              }
+              &.max-height-content {
+                max-height: 140px;
+                overflow-y: auto;
+              }
+            }
+            }
+            .location-section{
               .location-info {
                 max-height: 145px;
                 background: $color-22;
@@ -165,7 +187,7 @@
                     }
                   }
                 }
-                .location-hour {
+                .location-hour{
                   display: block;
                   text-align: left;
                   @include DDINCondensed();
@@ -174,7 +196,7 @@
                   font-weight: $font-weight-normal;
                   margin-top: 8px;
                   color: $color-23;
-                  &:first-child {
+                  &:first-child{
                     margin-top: 0;
                   }
                   &:hover {
@@ -189,6 +211,7 @@
                   display: flex;
                   justify-content: space-between;
                   padding-top: 14px;
+                  align-items: center;
                 }
                 .location-details {
                   display: flex;
@@ -208,19 +231,18 @@
                     @include border-radius($base-circle-radius);
                     &:nth-child(2) {
                       @include margin-left(12px);
-                      .lang-ar & {
+                      .lang-ar &{
                         margin-left: 12px;
                       }
                     }
-                    &:hover,
-                    &.active-tag {
+                    &:hover, &.active-tag {
                       background: $color-22;
                     }
                   }
                 }
                 .location-link {
                   margin-top: 12px;
-                  a {
+                  button {
                     @include yir-icon-external-link;
                     @include flex();
                     height: 100%;
@@ -228,15 +250,20 @@
                     align-items: center;
                     color: $color-23;
                     @include font-size($base-font-size-mobile);
-                    @include line-height($font-label-small-line-height);
+                    @include line-height($font-regular-mobile-line-height);
                     font-weight: $font-weight-normal;
                     letter-spacing: 1px;
                     direction: rtl;
                     gap: 4px;
                     @include border-radius($base-tags-radius);
-                    padding: 3px 12px 0px;
+                    padding: 6px 12px 5px;
+                    width: 100%;
                     .lang-ar & {
                       direction: ltr;
+                    }
+                    @include desktop {
+                      width: auto;
+                      padding: 3px 12px 0px;
                     }
                   }
                   @include desktop {
@@ -245,6 +272,7 @@
                 }
               }
             }
+           
           }
         }
       }
@@ -255,6 +283,10 @@
         @include font-size($font-body-24);
         width: 24px;
         height: 24px;
+        color: $color-24 ;
+        &:hover{
+          color: $color-24 ;
+        }
         @include desktop {
           right: 24px;
           top: 24px;
@@ -266,25 +298,37 @@
             left: 24px;
           }
         }
+        
+      }
+      .leaflet-popup-custom-close-button {
+        position: absolute;
+        border: none;
+        text-align: center;
+        font: 16px/24px Tahoma, Verdana, sans-serif; //add this for make same leaflet style
+        color: $color-24 ;
+        &:hover{
+          color: $color-24 ;
+        }
+        text-decoration: none;
+        background: transparent;
+        display: flex;
+        right: 9px;
+        top: 11px;
+        @include font-size($font-body-24);
+        width: 24px;
+        height: 24px;
+        .lang-ar & {
+          left: 12px;
+          right: auto;
+        }
       }
     }
     .leaflet-control-attribution {
       display: none !important;
     }
-  }
-  .custom-close-button {
-    position: absolute;
-    border: none;
-    text-align: center;
-    font: 16px/24px Tahoma, Verdana, sans-serif;
-    color: #757575;
-    text-decoration: none;
-    background: transparent;
-    display: flex;
-    right: 9px;
-    top: 11px;
-    font-size: 1.5rem;
-    width: 24px;
-    height: 24px;
+    .leaflet-control-zoom{
+      display: none;
+    }
   }
 }
+

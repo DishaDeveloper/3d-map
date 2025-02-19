@@ -207,7 +207,6 @@ const data = {
 
 const App = () => {
   const { locations, enableImageCordinate, desktopImage, mobileImage } = data;
-  console.log(locations, "@@");
   const [bounds, setBounds] = useState(null);
   const [info, setInfo] = useState({ number: false, time: false });
   const mapContainerRef = useRef(null);
