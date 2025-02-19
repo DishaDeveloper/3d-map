@@ -408,17 +408,6 @@ const App = () => {
                                       {location.title}
                                     </h4>
                                   )}
-                                  {canUseDOM() &&
-                                    IOSDevice() &&
-                                    detectMobile() && (
-                                      <button
-                                        onClick={() => closePopup()}
-                                        type="button"
-                                        className="leaflet-popup-custom-close-button"
-                                      >
-                                        x
-                                      </button>
-                                    )}
                                 </div>
                                 {location.subTitle && (
                                   <p className="location-sub-title">
