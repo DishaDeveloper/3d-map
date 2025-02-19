@@ -412,7 +412,6 @@ const App = () => {
                                     IOSDevice() &&
                                     detectMobile() && (
                                       <button
-                                        onPointerDown={() => closePopup()}
                                         onClick={() => closePopup()}
                                         type="button"
                                         className="leaflet-popup-custom-close-button"
@@ -484,13 +483,6 @@ const App = () => {
                                           time: false,
                                         })
                                       }
-                                      onPointerDown={() =>
-                                        IOSDevice() &&
-                                        setInfo({
-                                          number: !info.number,
-                                          time: false,
-                                        })
-                                      }
                                     >
                                       p
                                     </div>
@@ -499,13 +491,6 @@ const App = () => {
                                         info?.time ? "active-tag" : ""
                                       }`}
                                       onClick={() =>
-                                        setInfo({
-                                          number: false,
-                                          time: !info.time,
-                                        })
-                                      }
-                                      onPointerDown={() =>
-                                        IOSDevice() &&
                                         setInfo({
                                           number: false,
                                           time: !info.time,
@@ -521,10 +506,6 @@ const App = () => {
                                       onClick={() =>
                                         (window.location.href =
                                           location?.bookTicket?.href)
-                                      }
-                                      onPointerDown={() =>
-                                        IOSDevice() &&
-                                        handleRedirect(location?.bookTicket)
                                       }
                                     >
                                       {location?.bookTicket?.label}
