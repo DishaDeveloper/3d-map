@@ -1,0 +1,142 @@
+/* Base Colors */
+$light-grey-color: #c3c4c6;
+$dark-grey-color: #666;
+$grey-input-color: #333;
+$light-grey-border-color: #e8e8e8;
+$dark-grey-border-color: #d3d5da;
+
+$light-grey: #d3d0d0;
+$lightest-grey-color: #ccc;
+$lightest-grey-color1: #f5f5f5;
+$lightest-grey-color2: #e3e3e3;
+$lightest-grey-color3: #dedede;
+$lightest-grey-color4: #f7f7f7;
+$lightest-grey-color5: #a1a8af;
+$lightest-grey-color6: #eee;
+$lightest-grey-color7: #b5b5cd;
+$lightest-grey-color8: #4a4a4a;
+$lightest-grey-color9: #fcfcfc;
+$lightest-grey-color10: #d6d6d6;
+$lightest-grey-color11: #767676;
+$lightest-grey-color12: #f1f2f3;
+$lightest-grey-color13: #6f717b;
+
+/* Primary Colors */
+$primary-blue-color: #04aede;
+$primary-navy-blue-color: #154998;
+$primary-purple-color: #8a4694;
+$primary-pink-color: #e0318a;
+$primary-red-color: #e30613;
+$primary-orange-color: #eb8007;
+$primary-yellow-color: #ffd000;
+$primary-dark-color: #19132e;
+$primary-dark-pink-color: #d5207d;
+$primary-light-pink-color: #e12f81;
+$primary-light-green-color: #3ca179;
+$primary-dark-green-color: #1a844c;
+$primary-light-red-color: #f94153;
+$primary-dark-red-color: #91061b;
+
+/* Secondary Colors */
+$black-color: #000;
+$white-color: #fff;
+$blue-color: #4daee1;
+$error-color: #f00;
+$border-color-1: #efefef;
+$border-color-2: #e0e0e0;
+$border-color-3: #eedcbc;
+$dark-blue-1: #102d59;
+$dark-blue-2: #182141;
+$dark-blue-3: #08233c;
+$light-blue-1: #e1f5fb;
+$dark-color-1: #2c3135;
+$dark-color-2: #333f48;
+$light-yellow-color: #fffbed;
+$festive-red-color: #ad162a;
+$festive-yellow-color: #f9c327;
+$festive-red-variation1: #870016;
+$festive-red-variation2: #f94153;
+$yellow-variation1: #f4a817;
+$light-green: #00955a;
+$light-green-transparent: rgba(137, 231, 194, 0.15);
+$error-icon-color: #ff1857;
+$calendar-date-disabled: #bac2c7;
+$calendar-date-highlight: #e02e83;
+$calendar-blackout-date-color: #b0babf;
+$calendar-blackout-date-bgcolor: #f2f4f5;
+$calendar-note-bgcolor: #f5f7f8;
+$dark-black:#010101;
+$flash-divider: #aaa;
+$cookie-policy: #4074c3;
+$active-item: #0080a5;
+
+@mixin background-opacity($color, $opacity: 0.4) {
+  background: $color;
+  /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+// YIR Colors
+
+// Primary Colors
+$primary-blue: #072839;
+$primary-white: #ffffff;
+$primary-yellow: #ffea00;
+$primary-orange: #ff7916;
+$primary-booking-error-color: #ff7b00;
+
+$grey-with-opacity: rgba(220, 222, 224, 0.2);
+$grey-4: #6c809d;
+$primary-2: #2f3e79;
+$secondary-1: #ffe711;
+
+// Secondary Colors
+$secondary-dark-grey: #67757c;
+$secondary-silver-blue: #aebec6;
+$secondary-gold-tag: #a98a4e;
+$secondary-blue-tag: #154998;
+$secondary-light-grey: #dfe7ea;
+$secondary-lightest-grey: #f4f7f8;
+$secondary-dark-grey-new: #bdc6ca;
+$table-border-color: #d3d7da;
+$error-color: #f50014;
+$active-filter: #072c39;
+
+// Tertiary Colors
+$tertiary-green: #41cf86; //Need to change
+$tertiary-orange: #aebec6; //Need to change
+
+// Itinerary Colors
+$itinerary-hotel: #9bdff2;
+$itinerary-attraction: #f7cc9c;
+$itinerary-dine: #d0b5d4;
+$itinerary-themepark: #f3add0;
+$itinerary-default: #ccc;
+
+$color-1: #111111;
+$color-2: #3197ee;
+$color-3: #14cf86;
+$color-4: #cdd4d7;
+$color-5: #23282d;
+$color-6: #adbec6;
+$color-7: #f5f8fb;
+$color-8: #144a98;
+$color-9: #ff6363;
+$color-10: #a1a1a1;
+$color-11: #f2f9fc;
+$color-12: #999999;
+$color-13: #dbe1e8;
+$color-14: #e0e4e6;
+$color-15: #979797;
+$color-16: #23282d;
+$color-17: #e7e7e7;
+$color-bookingreference-error: #ee8232;
+$color-18: #f2f4f7;
+$color-19: #61646c;
+$color-20: #cecfd2;
+$color-21: #ffbc8f;
+$color-22: #f3f4f6;
+$color-23: #0c0c0d;
+$color-24: #85888E;
+$color-green-1: #89e7c2;
+$disabled-grey: #d7d7d7;

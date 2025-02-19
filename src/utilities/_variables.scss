@@ -1,0 +1,163 @@
+/*
+ *  Radius
+*/
+
+$base-radius: 4px;
+$base-circle-radius: 50%;
+$base-rounded-radius: 28px;
+$base-button-cta-radius: 100px;
+$base-button-radius: 20px;
+$base-tags-radius: 20px;
+$base-map-radius: 40px;
+$base-map-img-radius: 8px;
+
+/*
+ * Config
+ * @ Variables
+ *
+*/
+
+$global-border-box: true;
+
+$base-font-size: 16px;
+$base-line-height: 1.6;
+$base-font-size-mobile: 14px;
+$base-line-height-mobile: 1.6;
+$russian-language-line-height: 1.2;
+/*
+ *  Use Defaults
+*/
+
+$use-flexbox: true;
+
+/*
+ *  Yasisland base Font size
+*/
+
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+
+//eng lang-en
+
+/* media carousel overlay */
+$overlay-image-height: 450px;
+$overlay-thumbnail-height: 65px;
+$overlay-thumbnail-image-height: 54px;
+
+/*
+* z-index variables
+*/
+$z-index-loader: 1000 !default;
+$z-index-button-stylekit: -1 !default;
+$z-index-loader: 1000 !default;
+$z-index-minus-1: -1;
+$z-index-1: 1; //used in tabs-filter-listing-component.scss
+$z-index-2: 2;
+$z-index-12: 12;
+
+/**
+tab with placeholder
+*/
+$tab-border-selected: #151414 !default;
+$tab-border-unselected: #efefef !default;
+$dropdown-panel-border: #d3d0d0 !default;
+$dropdown-panel-box: rgba(0, 0, 0, 0.1) !default;
+
+$x-small: 480px;
+
+/*
+ *  Yasisland Font size
+*/
+$m-small-font-size: 13px;
+
+/*
+ *  Yasisland Font size
+*/
+$m-small-font-size: 13px;
+
+// New Design Accessibility Focusout line color
+$focussable-element-outline-color: #3aaede;
+
+// New Design Accessibility Focus out line width
+$outline-width: 2px;
+
+// image variables
+
+$loaderImg: '../../assets/img/newLoader.gif';
+$greenLoaderImg: 'https://uat-static.myconnect.ae/-/media/yasconnect/project/yasisland/loader/Loader_green.gif';
+$circleTickImg: '../../assets/img/circle-with-tick.png';
+
+// YIR Fonts Common Variables
+
+//Headline Starts
+$headline-extra-small: 28px !default;
+$headline-extra-small-xl: 32px !default;
+$headline-small: 35px !default;
+$headline-medium: 45px !default;
+$headline-large: 60px !default;
+$headline-xlarge: 100px !default;
+$headline-mobile-xlarge: 80px !default;
+$russian-language-banner-title: 50px !default;
+$russian-small-text: 26px !default;
+$headline-transport-small: 36px !default;
+
+$headline-extra-small-line-height: 54px !default;
+$headline-small-line-height: 42px !default;
+$headline-medium-line-height: 54px !default;
+$headline-large-line-height: 61px !default;
+$headline-xlarge-line-height: 100px !default;
+$headline-xsmall-line-height: 30px !default;
+$headline-xsmall-xl-line-height: 35px !default;
+$headline-transport-line-height: 44px !default;
+//Headline Ends
+
+//Body Starts
+$font-extrabig: 25px !default;
+$font-regular-big: 23px !default;
+$font-big: 22px !default;
+$font-medium: 20px !default;
+$font-regular: 18px !default;
+$font-normal-sm: 15px !default;
+$font-normal: 16px !default;
+$font-regular-small: 14px !default;
+$font-small: 12px !default;
+$font-xsmall: 10px !default;
+$font-xxsmall: 9px !default;
+$table-heading: 30px !default;
+$banner-40: 40px !default;
+$banner-50: 50px !default;
+$banner-56: 56px !default;
+$banner-60: 60px !default;
+$banner-64: 64px !default;
+$banner-70: 70px !default;
+$banner-74: 74px !default;
+$table-heading-line-height: 35px !default;
+$font-meganav-line-height: 30px !default;
+$font-bold-line-height: 27px !default;
+$font-big-line-height: 25px !default;
+$font-body-line-height: 24px !default;
+$font-extrabig-line-height: 22px !default;
+$font-button-line-height: 21px !default;
+$font-regular-mobile-line-height: 20px !default;
+$font-regular-line-height: 19px !default;
+$font-normal-line-height: 18px !default;
+$font-label-small-line-height: 17px !default;
+$font-label-xsmall-line-height: 16px !default;
+$font-small-line-height: 15px !default;
+$line-height-26: 26px;
+$line-height-28: 28px;
+$line-height-30: 30px;
+$line-height-31: 31px;
+$line-height-32: 32px;
+$line-height-33: 33px;
+$line-height-36: 36px;
+$line-height-56: 56px;
+$line-height-72: 72px;
+$font-body-24: 24px;
+$font-body-26: 26px;
+$font-body-30: 30px;
+//Body Ends

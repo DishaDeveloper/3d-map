@@ -1,0 +1,156 @@
+/*
+ * @ Fonts
+ *
+*/
+
+$base-font-family: 'Open Sans', Arial, sans-serif;
+
+$yas-regular-font-family: 'YasRegular', $base-font-family;
+$yas-bold-font-family: 'YasBold', $base-font-family;
+$yas-light-font-family: 'YasLight', $base-font-family;
+$yas-regular-italic-font-family: 'YasRegularItalic', $base-font-family;
+
+$NotoKufiArabic-font-family: 'Noto Kufi Arabic', $base-font-family;
+
+$SanFranciscoText-Bold-font-family: 'SanFranciscoText-Bold', $base-font-family;
+$SanFranciscoDisplay-Bold-font-family: 'SanFranciscoDisplay-Bold', $base-font-family;
+$SanFranciscoDisplay-Regular-font-family: 'SanFranciscoDisplay-Regular', $base-font-family;
+
+$Poppins-Regular-font-family: 'Poppins-Regular', $base-font-family;
+$Poppins-Medium-font-family: 'Poppins-Medium', $base-font-family;
+$Poppins-Bold-font-family: 'Poppins-Bold', $base-font-family;
+$Poppins-Light-font-family: 'Poppins-Light', $base-font-family;
+
+@mixin OpenSansNormal() {
+  font-family: $base-font-family;
+  font-weight: $font-weight-normal;
+}
+
+@mixin OpenSansLight() {
+  font-family: $base-font-family;
+  font-weight: $font-weight-light;
+}
+
+@mixin OpenSansBold() {
+  font-family: $base-font-family;
+  font-weight: $font-weight-bold;
+}
+
+@mixin OpenSansSemiBold() {
+  font-family: $base-font-family;
+  font-weight: $font-weight-semi-bold;
+}
+
+@mixin OpenSansExtraBold() {
+  font-family: $base-font-family;
+  font-weight: $font-weight-extra-bold;
+}
+
+@mixin YasRegular() {
+  font-family: $yas-regular-font-family;
+  font-weight: $font-weight-normal;
+}
+
+// Arabic
+@mixin NotoKufiArabicLight() {
+  font-family: $NotoKufiArabic-font-family;
+  font-weight: $font-weight-light;
+}
+
+@mixin NotoKufiArabicNormal() {
+  font-family: $NotoKufiArabic-font-family;
+  font-weight: $font-weight-normal;
+}
+
+@mixin NotoKufiArabicBold() {
+  font-family: $NotoKufiArabic-font-family;
+  font-weight: $font-weight-bold;
+}
+
+@mixin NotoKufiArabicExtraBold() {
+  font-family: $NotoKufiArabic-font-family;
+  font-weight: $font-weight-extra-bold;
+}
+
+//Frictionless
+@mixin SanFranciscoText-Bold() {
+  font-family: $SanFranciscoText-Bold-font-family;
+}
+
+@mixin SanFranciscoDisplay-Bold() {
+  font-family: $SanFranciscoDisplay-Bold-font-family;
+}
+
+@mixin SanFranciscoDisplay-Regular() {
+  font-family: $SanFranciscoDisplay-Regular-font-family;
+}
+
+//Poppins
+@mixin Poppins-Bold() {
+  font-family: $Poppins-Bold-font-family;
+}
+
+@mixin Poppins-Regular() {
+  font-family: $Poppins-Regular-font-family;
+}
+
+@mixin Poppins-Medium() {
+  font-family: $Poppins-Medium-font-family;
+}
+
+@mixin Poppins-Light() {
+  font-family: $Poppins-Light-font-family;
+}
+
+// YIR Fonts
+
+$bebas-regular-font-family: 'BebasRegular', $base-font-family;
+$ddin-condensed-bold-font-family: 'DDinCondensedBold', $base-font-family;
+$ddin-condensed-font-family: 'DDinCondensed', $base-font-family;
+
+$ddin-next-arabic-light-font-family: 'DINNextArabicLight', $base-font-family;
+$ddin-next-arabic-regular-font-family: 'DINNextArabicRegular', $base-font-family;
+$ddin-next-arabic-bold-font-family: 'DINNextArabicBold', $base-font-family;
+
+// mixins
+@mixin BebasRegular() {
+  font-family: $bebas-regular-font-family;
+  font-weight: $font-weight-normal;
+
+  .lang-ar & {
+    font-family: $ddin-next-arabic-bold-font-family;
+  }
+}
+
+@mixin DDINCondensedBold() {
+  font-family: $ddin-condensed-bold-font-family;
+  font-weight: $font-weight-normal;
+
+  .lang-ar & {
+    font-family: $ddin-next-arabic-bold-font-family;
+  }
+}
+
+@mixin DDINCondensed() {
+  font-family: $ddin-condensed-font-family;
+  font-weight: $font-weight-normal;
+
+  .lang-ar & {
+    font-family: $ddin-next-arabic-regular-font-family;
+  }
+}
+
+@mixin DINNextArabicLight() {
+  font-family: $ddin-next-arabic-light-font-family;
+  font-weight: $font-weight-normal;
+}
+
+@mixin DINNextArabicRegular() {
+  font-family: $ddin-next-arabic-regular-font-family;
+  font-weight: $font-weight-normal;
+}
+
+@mixin DINNextArabicBold() {
+  font-family: $ddin-next-arabic-bold-font-family;
+  font-weight: $font-weight-normal;
+}

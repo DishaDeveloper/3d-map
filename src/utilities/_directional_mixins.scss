@@ -1,0 +1,265 @@
+$dir: left;
+$def-dir: left;
+$opp-dir: right;
+
+@mixin float($dir) {
+  float: $dir;
+
+  .lang-ar & {
+    @if $dir ==left and $dir  !=none {
+      float: right;
+    }
+
+    @if $dir ==right and $dir  !=none {
+      float: left;
+    }
+
+    @if $dir ==none {
+      float: none;
+    }
+  }
+}
+
+//Example - @include float($dir);
+
+@mixin float-right($dir) {
+  float: $dir;
+
+  .lang-ar & {
+    float: $def-dir;
+  }
+}
+
+@mixin clear($dir) {
+  clear: $dir;
+
+  .lang-ar & {
+    @if $dir ==left {
+      clear: $opp-dir;
+    }
+
+    @if $dir ==right {
+      clear: $def-dir;
+    }
+  }
+}
+
+@mixin text-align($dir) {
+  text-align: $def-dir;
+
+  .lang-ar & {
+    text-align: $opp-dir;
+  }
+}
+
+@mixin text-align-right {
+  text-align: right;
+
+  .lang-ar & {
+    text-align: left;
+  }
+}
+
+//Example - @include text-align($dir);
+
+@mixin padding-left($unit, $flag: false) {
+  padding-#{$def-dir}: $unit;
+
+  .lang-ar & {
+    padding-#{$opp-dir}: $unit;
+
+    @if $flag  !=true {
+      padding-#{$def-dir}: 0;
+    }
+  }
+}
+
+//Example - @include padding-left(50px);
+
+@mixin padding-right($unit, $flag: false) {
+  padding-#{$opp-dir}: $unit;
+
+  .lang-ar & {
+    padding-#{$def-dir}: $unit;
+
+    @if $flag  !=true {
+      padding-#{$opp-dir}: 0;
+    }
+  }
+}
+
+//Example - @include padding-right(50px);
+
+@mixin margin-left($unit) {
+  margin-#{$def-dir}: $unit;
+
+  .lang-ar & {
+    margin-#{$opp-dir}: $unit;
+    margin-#{$def-dir}: auto;
+
+    @if $unit ==0 or $unit ==0px {
+      margin-#{$def-dir}: auto;
+    }
+
+    @if $unit ==auto {
+      margin-#{$def-dir}: 0;
+    }
+  }
+}
+
+//Example - @include margin-left(50px);
+
+@mixin margin-right($unit) {
+  margin-#{$opp-dir}: $unit;
+
+  .lang-ar & {
+    margin-#{$def-dir}: $unit;
+    margin-#{$opp-dir}: auto;
+
+    @if $unit ==0 or $unit ==0px {
+      margin-#{$opp-dir}: auto;
+    }
+
+    @if $unit ==auto {
+      margin-#{$opp-dir}: 0;
+    }
+  }
+}
+
+//Example - @include margin-right(50px);
+
+@mixin margin-lr($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+
+  .lang-ar & {
+    margin-left: $right;
+    margin-right: $left;
+  }
+}
+
+//Example - @include margin-lr(50px, 50px);
+
+@mixin padding-lr($left, $right) {
+  padding-left: $left;
+  padding-right: $right;
+
+  .lang-ar & {
+    padding-left: $right;
+    padding-right: $left;
+  }
+}
+
+//Example - @include padding-lr(50px,40px);
+
+@mixin border-left($var) {
+  border-#{$def-dir}: $var;
+
+  .lang-ar & {
+    border-#{$opp-dir}: $var;
+  }
+}
+
+//Example - @include border-left(50px);
+
+@mixin border-right($var) {
+  border-#{$opp-dir}: $var;
+
+  .lang-ar & {
+    border-#{$def-dir}: $var;
+  }
+}
+
+//Example - @include border-right(50px);
+
+@mixin left($unit) {
+  left: $unit;
+
+  .lang-ar & {
+    right: $unit;
+    left: auto;
+
+    @if $unit ==0 or $unit ==0px {
+      left: auto;
+    }
+
+    @if $unit ==auto {
+      left: 0;
+    }
+  }
+}
+
+//Example - @include left(50px);
+
+@mixin right($unit) {
+  right: $unit;
+
+  .lang-ar & {
+    left: $unit;
+    right: auto;
+
+    @if $unit ==0 or $unit ==0px {
+      right: auto;
+    }
+
+    @if $unit ==auto {
+      right: 0;
+    }
+  }
+}
+
+//Example - @include right(50px);
+
+@mixin rotate($deg) {
+  @include transform(rotate($deg));
+
+  .lang-ar & {
+    @include transform(rotate(360-$deg));
+  }
+}
+
+@mixin rotate-v1($deg) {
+  @include transform(rotate($deg));
+
+  .lang-ar & {
+    @include transform(rotate($deg + 180));
+  }
+}
+
+@mixin translate($param: 0, $param2: 0) {
+  @include transform(translate($param, $param2));
+
+  .lang-ar & {
+    @include transform(translate(-$param, -$param2));
+  }
+}
+
+// for flipping icons
+@mixin mirrorInArrabic() {
+  .lang-ar & {
+    transform: scaleX(-1);
+  }
+}
+
+// for flipping icons variation 2
+@mixin mirrorInArrabic-v1() {
+  .lang-ar & {
+    transform: scaleX(1);
+  }
+}
+
+//swad Mixin
+@mixin justify-content($dir) {
+  justify-content: $def-dir;
+
+  .lang-ar & {
+    justify-content: $opp-dir;
+  }
+}
+
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}

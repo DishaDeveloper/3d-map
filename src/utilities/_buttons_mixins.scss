@@ -1,0 +1,248 @@
+//YasIsland Buttons
+@mixin btn_default {
+  width: auto;
+  display: inline-block;
+  text-align: center;
+
+  a,
+  button {
+    @include transition(background-color 0.2s linear);
+    font-size: 12px;
+    font-weight: bold;
+    font-family: $yas-regular-font-family;
+    letter-spacing: 0.92px;
+    line-height: normal;
+    background-color: $primary-navy-blue-color;
+    color: $white-color;
+    padding: 17px 40px;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid $primary-navy-blue-color;
+    &:hover,
+    &:focus {
+      background-color: $primary-navy-blue-color;
+      color: $white-color;
+      border: 1px solid $primary-navy-blue-color;
+      @include desktop {
+        background-color: $primary-blue-color;
+        color: $white-color;
+        border: 1px solid $primary-blue-color;
+      }
+    }
+    &:active {
+      color: $white-color;
+      background-color: $primary-navy-blue-color;
+      @include desktop {
+        background-color: $primary-blue-color;
+      }
+    }
+    .lang-ar & {
+      letter-spacing: 0px !important;
+      font-weight: 400 !important;
+      font-family: $yas-bold-font-family !important;
+    }
+  }
+}
+
+@mixin btn_primary {
+  @include btn_default();
+}
+
+@mixin btn_primary_dark_bg {
+  @include btn_default();
+
+  a,
+  button {
+    @include background-opacity($black-color, 0.4);
+    color: $white-color;
+    background-color: transparent;
+    border-color: $white-color;
+    &:hover,
+    &:focus {
+      color: $primary-navy-blue-color;
+      background-color: transparent;
+      border-color: $white-color;
+    }
+    @include desktop {
+      &:hover,
+      &:focus {
+        color: $primary-blue-color;
+        background-color: $white-color;
+        border-color: $white-color;
+      }
+    }
+    &:active {
+      color: $primary-blue-color;
+      background-color: $white-color;
+      border-color: $white-color;
+    }
+  }
+}
+
+@mixin disabled-button {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+@mixin btn_secondary {
+  @include btn_default();
+
+  a,
+  button {
+    color: $primary-navy-blue-color;
+    background-color: transparent;
+    padding: 0;
+    @include padding-right(40px, true);
+    @include padding-left(10px, true);
+    @include transition(all 0.3s linear);
+    border: none;
+    &:hover,
+    &:focus {
+      color: $primary-navy-blue-color;
+      background-color: transparent;
+      border: none;
+      @include desktop {
+        color: $primary-blue-color;
+        background-color: transparent;
+        border: none;
+      }
+    }
+    &:active {
+      opacity: 0.5;
+    }
+    .lang-ar & {
+      letter-spacing: 0px !important;
+      font-weight: 400 !important;
+    }
+  }
+}
+
+@mixin btn_secondary_dark_bg {
+  @include btn_secondary();
+  a,
+  button {
+    padding: 0;
+    color: $white-color;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+@mixin btn_primary_on_image {
+  @include btn_primary();
+  a,
+  button {
+    @include background-opacity($black-color, 0.4);
+    @include padding-right(55px, true);
+    color: $white-color;
+    border: 1px solid rgba($white-color, 0.4);
+    &:hover,
+    &:focus {
+      @include background-opacity($black-color, 0.8);
+      color: $white-color;
+      border: none;
+      border: 1px solid rgba($white-color, 0.8);
+    }
+
+    &:active {
+      @include background-opacity($black-color, 0.6);
+      border: 1px solid rgba($white-color, 0.6);
+      color: $white-color;
+    }
+  }
+}
+
+@mixin btn_primary_image_variation {
+  @include btn_default();
+
+  a,
+  button {
+    color: $white-color;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    &:hover,
+    &:focus {
+      color: $white-color;
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+@mixin btn_secondary_arrow() {
+  @include btn_secondary();
+  @include icon-arrow-long;
+  position: relative;
+  &:before {
+    @include transition(all 0.3s linear);
+    @include right(10px);
+    position: absolute;
+    top: 2px;
+    font-size: 20px;
+    color: $primary-navy-blue-color;
+    @include desktop {
+      top: 4px;
+    }
+    .lang-ar & {
+      transform: scale(-1, 1);
+    }
+  }
+  &:hover:before,
+  &:focus:before {
+    color: $primary-navy-blue-color;
+    @include desktop {
+      color: $primary-blue-color;
+    }
+  }
+  @include desktop {
+    &:focus-within {
+      &::before {
+        @include right(0);
+        color: $primary-blue-color;
+      }
+    }
+    &:hover,
+    &:focus,
+    &.focus-within {
+      // IE Fix
+      &::before {
+        @include right(0);
+      }
+    }
+    &.focus-within {
+      // IE Fix
+      &::before {
+        color: $primary-blue-color;
+      }
+    }
+  }
+}
+
+@mixin btn_secondary_download {
+  @include btn_secondary();
+  @include icon-download;
+  position: relative;
+  &:before {
+    @include transition(all 0.3s linear);
+    @include right(5px);
+    position: absolute;
+    top: 3px;
+    font-size: 20px;
+    color: $primary-navy-blue-color;
+  }
+  &:hover:before,
+  &:focus:before {
+    color: $primary-blue-color;
+  }
+}
+
+@mixin btn_secondary_dark_arrow() {
+  @include btn_secondary();
+}
+
+@mixin btn_secondary_dark_download {
+  @include btn_secondary();
+}

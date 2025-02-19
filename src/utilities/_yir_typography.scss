@@ -1,0 +1,643 @@
+/* Headings */
+@mixin heading-1($color: $color-1) {
+  @include BebasRegular;
+  @include font-size($headline-mobile-xlarge);
+  @include line-height($headline-xlarge-line-height);
+  letter-spacing: 0;
+  color: $color;
+  @include desktop {
+    @include font-size($headline-xlarge);
+    @include line-height($headline-xlarge-line-height);
+  }
+  .lang-ar & {
+    @include font-size($headline-mobile-xlarge);
+    @include line-height($headline-xlarge-line-height);
+    @include desktop {
+      @include font-size($headline-xlarge);
+      @include line-height($headline-xlarge-line-height);
+    }
+  }
+  .lang-ru & {
+    @include font-size($headline-mobile-xlarge);
+    @include line-height($headline-xlarge-line-height);
+    @include desktop {
+      @include font-size($headline-xlarge);
+      @include line-height($headline-xlarge-line-height);
+    }
+  }
+  .lang-zh & {
+    @include font-size($headline-mobile-xlarge);
+    @include line-height($headline-xlarge-line-height);
+    @include desktop {
+      @include font-size($headline-xlarge);
+      @include line-height($headline-xlarge-line-height);
+    }
+  }
+}
+
+@mixin heading-2 {
+  @include BebasRegular;
+  @include font-size($headline-large);
+  @include line-height($headline-large-line-height);
+  letter-spacing: 2px;
+  @include desktop {
+    @include font-size($headline-large);
+    @include line-height($headline-large-line-height);
+  }
+  .lang-ar & {
+    @include font-size($headline-large);
+    @include line-height($headline-large-line-height);
+    @include desktop {
+      @include font-size($headline-large);
+      @include line-height($headline-large-line-height);
+    }
+  }
+  .lang-ru & {
+    @include font-size($headline-large);
+    @include line-height($headline-large-line-height);
+    @include desktop {
+      @include font-size($headline-large);
+      @include line-height($headline-large-line-height);
+    }
+  }
+  .lang-zh & {
+    @include font-size($headline-large);
+    @include line-height($headline-large-line-height);
+    @include desktop {
+      @include font-size($headline-large);
+      @include line-height($headline-large-line-height);
+    }
+  }
+}
+
+@mixin heading-3 {
+  @include BebasRegular;
+  @include font-size($headline-medium);
+  @include line-height($headline-medium-line-height);
+  letter-spacing: 1.5px;
+  @include desktop {
+    @include font-size($headline-medium);
+    @include line-height($headline-medium-line-height);
+  }
+  .lang-ar & {
+    @include font-size($headline-medium);
+    @include line-height($headline-medium-line-height);
+    @include desktop {
+      @include font-size($headline-medium);
+      @include line-height($headline-medium-line-height);
+    }
+  }
+  .lang-ru & {
+    @include font-size($headline-medium);
+    @include line-height($headline-medium-line-height);
+    @include desktop {
+      @include font-size($headline-medium);
+      @include line-height($headline-medium-line-height);
+    }
+  }
+  .lang-zh & {
+    @include font-size($headline-medium);
+    @include line-height($headline-medium-line-height);
+    @include desktop {
+      @include font-size($headline-medium);
+      @include line-height($headline-medium-line-height);
+    }
+  }
+}
+
+@mixin heading-4 {
+  @include BebasRegular;
+  @include font-size($headline-small);
+  @include line-height($headline-small-line-height);
+  letter-spacing: 1px;
+  @include desktop {
+    @include font-size($headline-small);
+    @include line-height($headline-small-line-height);
+  }
+  .lang-ar & {
+    @include font-size($headline-small);
+    @include line-height($headline-small-line-height);
+    @include desktop {
+      @include font-size($headline-small);
+      @include line-height($headline-small-line-height);
+    }
+  }
+  .lang-ru &,
+  .lang-zh & {
+    @include font-size($headline-small);
+    @include line-height($headline-small-line-height);
+    @include desktop {
+      @include font-size($headline-small);
+      @include line-height($headline-small-line-height);
+    }
+  }
+}
+
+@mixin heading-5 {
+  @include BebasRegular;
+  @include font-size($headline-extra-small);
+  @include line-height($headline-extra-small-line-height);
+  letter-spacing: 1.5px;
+  @include desktop {
+    @include font-size($headline-extra-small);
+    @include line-height($headline-extra-small-line-height);
+  }
+  .lang-ar & {
+    @include font-size($headline-extra-small);
+    @include line-height($headline-extra-small-line-height);
+    @include desktop {
+      @include font-size($headline-extra-small);
+      @include line-height($headline-extra-small-line-height);
+    }
+  }
+  .lang-ru &,
+  .lang-zh & {
+    @include font-size($headline-extra-small);
+    @include line-height($headline-extra-small-line-height);
+    @include desktop {
+      @include font-size($headline-extra-small);
+      @include line-height($headline-extra-small-line-height);
+    }
+  }
+}
+
+@mixin heading-6 {
+  @include BebasRegular;
+  @include font-size($font-regular);
+  @include line-height($font-extrabig-line-height);
+  letter-spacing: 0.3px;
+  @include desktop {
+    @include font-size($font-big);
+    @include line-height($font-bold-line-height);
+    letter-spacing: -0.5px;
+  }
+  .lang-ar & {
+    @include font-size($font-regular);
+    @include line-height($font-bold-line-height);
+    letter-spacing: 0.3px;
+    @include desktop {
+      @include font-size($font-big);
+      @include line-height($headline-xsmall-line-height);
+      letter-spacing: -0.5px;
+    }
+  }
+  .lang-ru &,
+  .lang-zh & {
+    @include font-size($font-normal);
+    @include line-height($font-regular-mobile-line-height);
+    @include desktop {
+      @include font-size($font-medium);
+      @include line-height($font-body-line-height);
+    }
+  }
+}
+
+@mixin body-copy-1 {
+  @include DDINCondensed;
+  @include font-size($font-medium);
+  @include line-height($font-regular-mobile-line-height);
+  letter-spacing: 0;
+  @include desktop {
+    @include font-size($font-extrabig);
+    @include line-height($font-big-line-height);
+  }
+  .lang-ar & {
+    @include font-size($font-medium);
+    @include line-height($font-regular-mobile-line-height);
+    letter-spacing: 0.3px;
+    @include desktop {
+      @include font-size($font-extrabig);
+      @include line-height($font-big-line-height);
+    }
+  }
+  .lang-ru &,
+  .lang-zh & {
+    @include font-size($font-medium);
+    @include line-height($font-regular-mobile-line-height);
+    @include desktop {
+      @include font-size($font-extrabig);
+      @include line-height($font-big-line-height);
+    }
+  }
+}
+
+@mixin body-copy-2 {
+  @include DDINCondensed;
+  @include font-size($font-medium);
+  @include line-height($font-bold-line-height);
+  letter-spacing: 0;
+  @include desktop {
+    @include font-size($font-medium);
+    @include line-height($font-bold-line-height);
+  }
+  .lang-ar & {
+    @include font-size($font-medium);
+    @include line-height($font-bold-line-height);
+    letter-spacing: 0.3px;
+    @include desktop {
+      @include font-size($font-medium);
+      @include line-height($font-bold-line-height);
+    }
+  }
+  .lang-ru &,
+  .lang-zh & {
+    @include font-size($font-medium);
+    @include line-height($font-bold-line-height);
+    @include desktop {
+      @include font-size($font-medium);
+      @include line-height($font-bold-line-height);
+    }
+  }
+}
+
+@mixin body-copy-3 {
+  @include DDINCondensed;
+  @include font-size($font-regular);
+  @include line-height($font-body-line-height);
+  letter-spacing: 0;
+  @include desktop {
+    @include font-size($font-regular);
+    @include line-height($font-body-line-height);
+  }
+  .lang-ar & {
+    @include font-size($font-regular);
+    @include line-height($font-body-line-height);
+    @include desktop {
+      @include font-size($font-regular);
+      @include line-height($font-body-line-height);
+    }
+  }
+  .lang-ru &,
+  .lang-zh & {
+    @include font-size($font-regular);
+    @include line-height($font-body-line-height);
+    @include desktop {
+      @include font-size($font-regular);
+      @include line-height($font-body-line-height);
+    }
+  }
+}
+
+@mixin body-copy-4 {
+  @include BebasRegular;
+  @include font-size($font-xsmall);
+  @include line-height($font-normal-line-height);
+  letter-spacing: 0.2px;
+  @include desktop {
+    @include font-size($font-small);
+  }
+  .lang-ar & {
+    @include font-size($font-xsmall);
+    @include line-height($font-normal-line-height);
+    letter-spacing: 0.2px;
+    @include desktop {
+      @include font-size($font-small);
+    }
+  }
+  .lang-ru &,
+  .lang-zh & {
+    @include font-size($font-xxsmall);
+    @include line-height($font-label-small-line-height);
+    @include desktop {
+      @include font-size($font-small);
+    }
+  }
+}
+
+@mixin nav-copy-1 {
+  @include BebasRegular;
+  @include font-size($font-big);
+  @include line-height($font-bold-line-height);
+  letter-spacing: 1.5px;
+  @include desktop {
+    @include font-size($font-big);
+    @include line-height($font-bold-line-height);
+    letter-spacing: 2px;
+  }
+}
+
+@mixin nav-copy-2 {
+  @include BebasRegular;
+  @include font-size($font-regular);
+  @include line-height($font-button-line-height);
+  letter-spacing: 1.6px;
+  @include desktop {
+    @include font-size($font-regular);
+    @include line-height($font-button-line-height);
+  }
+}
+
+@mixin nav-copy-3 {
+  @include BebasRegular;
+  @include font-size($font-normal);
+  @include line-height($font-extrabig-line-height);
+  letter-spacing: 0.3px;
+  @include desktop {
+    @include font-size($font-xsmall);
+    @include line-height($font-regular-mobile-line-height);
+    letter-spacing: 0.2px;
+  }
+}
+
+@mixin nav-copy-4 {
+  @include BebasRegular;
+  @include font-size($font-small);
+  @include line-height($font-normal-line-height);
+  letter-spacing: 0.2px;
+  @include desktop {
+    @include font-size($font-small);
+  }
+}
+
+@mixin nav-copy-5 {
+  @include BebasRegular;
+  @include font-size($font-normal);
+  @include line-height($font-extrabig-line-height);
+  letter-spacing: 0.3px;
+  @include desktop {
+    @include font-size($font-small);
+    @include line-height($font-body-line-height);
+  }
+}
+
+@mixin meganav-copy-1 {
+  @include desktop {
+    @include BebasRegular;
+    @include font-size($font-small);
+    @include line-height($font-meganav-line-height);
+    letter-spacing: 0.2px;
+  }
+}
+
+@mixin meganav-copy-2 {
+  @include BebasRegular;
+  @include font-size($font-regular-small);
+  @include line-height($font-regular-mobile-line-height);
+  letter-spacing: 0.3px;
+  @include desktop {
+    @include font-size($font-small);
+    @include line-height($font-meganav-line-height);
+    letter-spacing: 0.2px;
+  }
+}
+
+@mixin label-1 {
+  @include BebasRegular;
+  @include font-size($font-normal);
+  @include line-height($font-regular-line-height);
+  letter-spacing: 1.3px;
+  @include desktop {
+    @include font-size($font-normal);
+    @include line-height($font-regular-line-height);
+  }
+}
+
+@mixin label-1-xl {
+  @include BebasRegular;
+  @include font-size($font-regular);
+  @include line-height($font-regular-mobile-line-height);
+  letter-spacing: 1.3px;
+  @include desktop {
+    @include font-size($font-regular);
+    @include line-height($font-regular-mobile-line-height);
+  }
+}
+
+@mixin label-2 {
+  @include BebasRegular;
+  @include font-size($font-small);
+  @include line-height($font-small-line-height);
+  letter-spacing: 1px;
+  @include desktop {
+    @include font-size($font-small);
+    @include line-height($font-small-line-height);
+  }
+}
+
+// YIR Global Elements Styling Starts
+
+// List Styling
+
+.yir-list {
+  margin-bottom: 20px;
+  li {
+    @include DDINCondensed;
+    @include body-copy-3;
+    color: $secondary-dark-grey;
+    list-style: none;
+    position: relative;
+
+    &:before {
+      content: '.';
+      position: absolute;
+      left: -5px;
+      bottom: 0;
+    }
+  }
+}
+
+ol {
+  li {
+    @include DDINCondensed;
+    @include body-copy-3;
+    color: $secondary-dark-grey;
+  }
+}
+
+// Table Styling
+table,
+.yir-table {
+  @include mobile {
+    &__wrapper {
+      display: block;
+      overflow-x: auto;
+    }
+    width: 600px;
+  }
+  &.no-border {
+    border: none !important;
+  }
+  th,
+  td {
+    border: inherit;
+  }
+  border: 1px solid $table-border-color !important;
+  border-radius: 20px;
+  td {
+    color: $secondary-dark-grey;
+    @include DDINCondensed;
+    @include body-copy-1;
+  }
+  th {
+    @include BebasRegular;
+    @include body-copy-1;
+    font-size: $table-heading;
+    line-height: $table-heading-line-height;
+    text-transform: uppercase;
+    color: $primary-blue;
+  }
+  tr {
+    border-bottom: 1px solid rgba($table-border-color, 0.5);
+    &:last-child {
+      th,
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+// Form Styling
+
+.form-group {
+  display: block;
+  margin-bottom: 25px;
+
+  label {
+    @include BebasRegular;
+    @include label-1;
+    color: $primary-blue;
+    display: block;
+  }
+  input {
+    @include DDINCondensed;
+    @include body-copy-1;
+    color: $primary-blue;
+    border-bottom: 1px solid $secondary-dark-grey;
+    padding: 4px 0 7px 0;
+  }
+  .error,
+  &.error {
+    display: block;
+    border: none;
+    color: $color-3;
+    @include DDINCondensed;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 7px;
+    input {
+      border-bottom-color: $color-3;
+    }
+    label {
+      color: $color-3;
+    }
+  }
+
+  // Checkbox
+  input[type='checkbox'] {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+
+  &.checkbox {
+    &__wrapper {
+      label {
+        position: relative;
+        cursor: pointer;
+        color: $secondary-dark-grey;
+        @include DDINCondensed;
+        &:before {
+          content: '';
+          -webkit-appearance: none;
+          background-color: transparent;
+          border: 2px solid $secondary-dark-grey;
+          padding: 7px;
+          display: inline-block;
+          position: relative;
+          vertical-align: middle;
+          cursor: pointer;
+          @include margin-right(17px);
+        }
+      }
+      input:checked + label:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 4px;
+        @include left(6px);
+        width: 6px;
+        height: 10px;
+        border: solid $primary-blue;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+      input:checked + label:before {
+        border: 2px solid $primary-blue;
+      }
+    }
+  }
+
+  // Radio Button
+  .radio {
+    margin: 0;
+    padding: 0 25px 0 0;
+    input[type='radio'] {
+      position: absolute;
+      opacity: 0;
+      &:checked {
+        + .radio-label {
+          color: $primary-blue;
+        }
+      }
+      + .radio-label {
+        color: $secondary-dark-grey;
+        padding-left: 0;
+        &:before {
+          content: '';
+          background: $white-color;
+          border-radius: 100%;
+          border: 1px solid $secondary-dark-grey;
+          display: inline-block;
+          width: 17px;
+          height: 17px;
+          position: relative;
+          top: 0;
+          margin-right: 1em;
+          vertical-align: top;
+          cursor: pointer;
+          text-align: center;
+          transition: all 250ms ease;
+        }
+      }
+      &:checked {
+        + .radio-label {
+          &:before {
+            background-color: $color-3;
+            box-shadow: inset 0 0 0 2px $white-color;
+          }
+        }
+      }
+      &:focus {
+        + .radio-label {
+          &:before {
+            outline: none;
+            border-color: $secondary-dark-grey;
+          }
+        }
+      }
+      &:disabled {
+        + .radio-label {
+          opacity: 0.3;
+          &:before {
+            box-shadow: inset 0 0 0 2px $white-color;
+            border-color: $secondary-dark-grey;
+            //opacity: 0.3;
+          }
+        }
+      }
+      + .radio-label {
+        &:empty {
+          &:before {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// YIR Global Elements Styling Ends

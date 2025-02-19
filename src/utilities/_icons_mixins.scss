@@ -1,0 +1,1095 @@
+@mixin yas-icons {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  &:before {
+    font-family: 'Yas-icons', sans-serif !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    .lang-de & {
+      font-family: 'Yas-icons', sans-serif !important;
+    }
+  }
+}
+
+@mixin revamp-yas-icons {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  &:before {
+    font-family: 'revamp-yas-icons', sans-serif !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    .lang-de & {
+      font-family: 'revamp-yas-icons', sans-serif !important;
+    }
+  }
+}
+
+@mixin yas-icons-set2 {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  &:before {
+    font-family: 'Yas-icons-set2', sans-serif !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+// Yasisland revamp icons
+@mixin yir-icons {
+  &:before {
+    font-family: 'yir-icons', sans-serif !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    .lang-de & {
+      font-family: 'yir-icons', sans-serif !important;
+    }
+  }
+}
+
+@mixin icon-360 {
+  @include yas-icons();
+  &:before {
+    content: '\e900';
+  }
+}
+
+@mixin icon-arrow-long {
+  @include yas-icons();
+  &:before {
+    content: '\e901';
+  }
+}
+
+@mixin icon-arrow-thik {
+  @include yas-icons();
+  &:before {
+    content: '\e902';
+  }
+}
+
+@mixin icon-arrow-thin {
+  @include yas-icons();
+  &:before {
+    content: '\e903';
+  }
+}
+
+@mixin icon-calendar {
+  @include yas-icons();
+  &:before {
+    content: '\e904';
+  }
+}
+
+@mixin icon-checkbox {
+  @include yas-icons();
+  &:before {
+    content: '\e905';
+  }
+}
+
+@mixin icon-close {
+  @include yas-icons();
+  &:before {
+    content: '\e906';
+  }
+}
+
+@mixin icon-delete-fill {
+  @include yas-icons();
+  &:before {
+    content: '\e907';
+  }
+}
+
+@mixin icon-delete {
+  @include yas-icons();
+  &:before {
+    content: '\e908';
+  }
+}
+
+@mixin icon-down-arrow {
+  @include yas-icons();
+  &:before {
+    content: '\e909';
+  }
+}
+
+@mixin icon-download {
+  @include yas-icons();
+  &:before {
+    content: '\e90a';
+  }
+}
+
+@mixin icon-facebook {
+  @include yas-icons();
+  &:before {
+    content: '\e90b';
+  }
+}
+
+@mixin icon-Scene {
+  @include yas-icons();
+  &:before {
+    content: '\e90c';
+  }
+}
+
+@mixin icon-heart-fill {
+  @include yas-icons();
+  &:before {
+    content: '\e90d';
+  }
+}
+
+@mixin icon-heart {
+  @include yas-icons();
+  &:before {
+    content: '\e90e';
+  }
+}
+
+@mixin icon-instagram {
+  @include yas-icons();
+  &:before {
+    content: '\e90f';
+  }
+}
+
+@mixin icon-login {
+  @include revamp-yas-icons();
+  &:before {
+    content: '\f104';
+  }
+}
+
+@mixin icon-arrow-down {
+  @include revamp-yas-icons();
+  &:before {
+    content: '\f101';
+  }
+}
+@mixin icon-arrow-up {
+  @include revamp-yas-icons();
+  &:before {
+    content: '\f107';
+  }
+}
+
+@mixin icon-minus {
+  @include yas-icons();
+  &:before {
+    content: '\e911';
+  }
+}
+
+@mixin icon-plus {
+  @include yas-icons();
+  &:before {
+    content: '\e912';
+  }
+}
+
+@mixin icon-search {
+  @include revamp-yas-icons();
+  &:before {
+    content: '\f105';
+  }
+}
+
+@mixin icon-share {
+  @include yas-icons();
+  &:before {
+    content: '\e914';
+  }
+}
+
+@mixin icon-tick {
+  @include yas-icons();
+  &:before {
+    content: '\e915';
+  }
+}
+
+@mixin icon-ticket {
+  @include yas-icons();
+  &:before {
+    content: '\e916';
+  }
+}
+
+@mixin icon-time {
+  @include yas-icons();
+  &:before {
+    content: '\e917';
+  }
+}
+
+@mixin icon-tripadvisor {
+  @include yas-icons();
+  &:before {
+    content: '\e918';
+  }
+}
+
+@mixin icon-twitter {
+  @include yas-icons();
+  &:before {
+    content: '\e919';
+  }
+}
+
+@mixin icon-website {
+  @include yas-icons();
+  &:before {
+    content: '\e91a';
+  }
+}
+
+@mixin icon-youtube {
+  @include yas-icons();
+  &:before {
+    content: '\e91b';
+  }
+}
+
+@mixin icon-BurjAlArab {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e909';
+  }
+}
+
+@mixin icon-Earth {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e90a';
+  }
+}
+
+@mixin icon-Plane {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e90b';
+  }
+}
+
+@mixin icon-Sun {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e90c';
+  }
+}
+
+@mixin icon-Time {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e90d';
+  }
+}
+
+@mixin icon-Beach {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e900';
+  }
+}
+
+@mixin icon-Calendar {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e901';
+  }
+}
+
+@mixin icon-Golf {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e902';
+  }
+}
+
+@mixin icon-Hotel {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e903';
+  }
+}
+
+@mixin icon-location {
+  @include revamp-yas-icons();
+  &:before {
+    content: '\f103';
+  }
+}
+
+@mixin icon-phone {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e905';
+  }
+}
+
+@mixin icon-Shopping {
+  @include revamp-yas-icons();
+  &:before {
+    content: '\f106';
+  }
+}
+
+@mixin icon-Theme-park {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e907';
+  }
+}
+
+@mixin icon-Yas-Marina {
+  @include yas-icons-set2;
+  &:before {
+    content: '\e908';
+  }
+}
+
+// YIR Icons mixins starts
+
+@mixin yir-icon-ac {
+  @include yir-icons();
+  &:before {
+    content: '\f101';
+  }
+}
+@mixin yir-icon-add-ons {
+  @include yir-icons();
+  &:before {
+    content: '\f102';
+  }
+}
+@mixin yir-icon-attraction {
+  @include yir-icons();
+  &:before {
+    content: '\f103';
+  }
+}
+@mixin yir-icon-bar {
+  @include yir-icons();
+  &:before {
+    content: '\f104';
+  }
+}
+@mixin yir-icon-calendar {
+  @include yir-icons();
+  &:before {
+    content: '\f105';
+  }
+}
+@mixin yir-icon-call {
+  @include yir-icons();
+  &:before {
+    content: '\f106';
+  }
+}
+@mixin yir-icon-cart {
+  @include yir-icons();
+  &:before {
+    content: '\f107';
+  }
+}
+@mixin yir-icon-chat {
+  @include yir-icons();
+  &:before {
+    content: '\f108';
+  }
+}
+@mixin yir-icon-checkout {
+  @include yir-icons();
+  &:before {
+    content: '\f109';
+  }
+}
+@mixin yir-icon-close {
+  @include yir-icons();
+  &:before {
+    content: '\f10a';
+  }
+}
+@mixin yir-icon-dine {
+  @include yir-icons();
+  &:before {
+    content: '\f10b';
+  }
+}
+@mixin yir-icon-dollar {
+  @include yir-icons();
+  &:before {
+    content: '\f10c';
+  }
+}
+@mixin yir-icon-down-arrow {
+  @include yir-icons();
+  &:before {
+    content: '\f10d';
+  }
+}
+@mixin yir-icon-edit {
+  @include yir-icons();
+  &:before {
+    content: '\f10e';
+  }
+}
+@mixin yir-icon-email {
+  @include yir-icons();
+  &:before {
+    content: '\f10f';
+  }
+}
+@mixin yir-icon-event {
+  @include yir-icons();
+  &:before {
+    content: '\f110';
+  }
+}
+@mixin yir-icon-facepass {
+  @include yir-icons();
+  &:before {
+    content: '\f111';
+  }
+}
+@mixin yir-icon-filter {
+  @include yir-icons();
+  &:before {
+    content: '\f112';
+  }
+}
+@mixin yir-icon-golf {
+  @include yir-icons();
+  &:before {
+    content: '\f113';
+  }
+}
+@mixin yir-icon-gv {
+  @include yir-icons();
+  &:before {
+    content: '\f114';
+  }
+}
+@mixin yir-icon-hambuger {
+  @include yir-icons();
+  &:before {
+    content: '\f115';
+  }
+}
+@mixin yir-icon-heart {
+  @include yir-icons();
+  &:before {
+    content: '\f116';
+  }
+}
+@mixin yir-icon-kart {
+  @include yir-icons();
+  &:before {
+    content: '\f117';
+  }
+}
+@mixin yir-icon-left {
+  @include yir-icons();
+  &:before {
+    content: '\f118';
+  }
+}
+@mixin yir-icon-list {
+  @include yir-icons();
+  &:before {
+    content: '\f119';
+  }
+}
+@mixin yir-icon-logout {
+  @include yir-icons();
+  &:before {
+    content: '\f11a';
+  }
+}
+@mixin yir-icon-map-box {
+  @include yir-icons();
+  &:before {
+    content: '\f11b';
+  }
+}
+@mixin yir-icon-map {
+  @include yir-icons();
+  &:before {
+    content: '\f11c';
+  }
+}
+@mixin yir-icon-menu-close {
+  @include yir-icons();
+  &:before {
+    content: '\f11d';
+  }
+}
+@mixin yir-icon-minus {
+  @include yir-icons();
+  &:before {
+    content: '\f11e';
+  }
+}
+@mixin yir-icon-na {
+  @include yir-icons();
+  &:before {
+    content: '\f11f';
+  }
+}
+@mixin yir-icon-parking {
+  @include yir-icons();
+  &:before {
+    content: '\f120';
+  }
+}
+@mixin yir-icon-play {
+  @include yir-icons();
+  &:before {
+    content: '\f121';
+  }
+}
+@mixin yir-icon-plus {
+  @include yir-icons();
+  &:before {
+    content: '\f122';
+  }
+}
+@mixin yir-icon-ratings-fill {
+  @include yir-icons();
+  &:before {
+    content: '\f123';
+  }
+}
+@mixin yir-icon-ratings {
+  @include yir-icons();
+  &:before {
+    content: '\f124';
+  }
+}
+@mixin yir-icon-restaurant {
+  @include yir-icons();
+  &:before {
+    content: '\f125';
+  }
+}
+@mixin yir-icon-right {
+  @include yir-icons();
+  &:before {
+    content: '\f126';
+  }
+}
+@mixin yir-icon-safety {
+  @include yir-icons();
+  &:before {
+    content: '\f127';
+  }
+}
+@mixin yir-icon-search-icon {
+  @include yir-icons();
+  &:before {
+    content: '\f128';
+  }
+}
+@mixin yir-icon-share {
+  @include yir-icons();
+  &:before {
+    content: '\f129';
+  }
+}
+@mixin yir-icon-stay {
+  @include yir-icons();
+  &:before {
+    content: '\f12a';
+  }
+}
+@mixin yir-icon-tick {
+  @include yir-icons();
+  &:before {
+    content: '\f12b';
+  }
+}
+@mixin yir-icon-time {
+  @include yir-icons();
+  &:before {
+    content: '\f12c';
+  }
+}
+@mixin yir-icon-transport {
+  @include yir-icons();
+  &:before {
+    content: '\f12d';
+  }
+}
+@mixin yir-icon-trip-advisor {
+  @include yir-icons();
+  &:before {
+    content: '\f12e';
+  }
+}
+@mixin yir-icon-trip {
+  @include yir-icons();
+  &:before {
+    content: '\f12f';
+  }
+}
+@mixin yir-icon-up-arrow {
+  @include yir-icons();
+  &:before {
+    content: '\f130';
+  }
+}
+@mixin yir-icon-user {
+  @include yir-icons();
+  &:before {
+    content: '\f131';
+  }
+}
+@mixin yir-icon-visit {
+  @include yir-icons();
+  &:before {
+    content: '\f132';
+  }
+}
+@mixin yir-icon-wifi {
+  @include yir-icons();
+  &:before {
+    content: '\f133';
+  }
+}
+
+@mixin yir-icon-guest {
+  @include yir-icons();
+  &:before {
+    content: '\f134';
+  }
+}
+
+@mixin yir-icon-guest-child {
+  @include yir-icons();
+  &:before {
+    content: '\f135';
+  }
+}
+@mixin yir-icon-download {
+  @include yir-icons();
+  &:before {
+    content: '\f136';
+  }
+}
+
+@mixin yir-icon-alert {
+  @include yir-icons();
+  &:before {
+    content: '\f137';
+  }
+}
+
+// Amenities list from travelbox starts here
+@mixin yir-icon-am-parking {
+  @include yir-icons();
+  &:before {
+    content: '\f138';
+  }
+}
+
+@mixin yir-icon-am-atm {
+  @include yir-icons();
+  &:before {
+    content: '\f139';
+  }
+}
+
+@mixin yir-icon-am-banquethall {
+  @include yir-icons();
+  &:before {
+    content: '\f13a';
+  }
+}
+
+@mixin yir-icon-am-bathrobes-hair {
+  @include yir-icons();
+  &:before {
+    content: '\f13b';
+  }
+}
+
+@mixin yir-icon-am-chalets {
+  @include yir-icons();
+  &:before {
+    content: '\f13c';
+  }
+}
+
+@mixin yir-icon-am-yasexpress {
+  @include yir-icons();
+  &:before {
+    content: '\f13d';
+  }
+}
+
+@mixin yir-icon-am-wheelchair-emergency {
+  @include yir-icons();
+  &:before {
+    content: '\f13e';
+  }
+}
+
+@mixin yir-icon-am-wheelchair-lobby {
+  @include yir-icons();
+  &:before {
+    content: '\f13f';
+  }
+}
+
+@mixin yir-icon-am-watersport {
+  @include yir-icons();
+  &:before {
+    content: '\f140';
+  }
+}
+
+@mixin yir-icon-am-valet-parking {
+  @include yir-icons();
+  &:before {
+    content: '\f141';
+  }
+}
+
+@mixin yir-icon-am-swimpool {
+  @include yir-icons();
+  &:before {
+    content: '\f143';
+  }
+}
+
+@mixin yir-icon-am-swimpool-bar {
+  @include yir-icons();
+  &:before {
+    content: '\f144';
+  }
+}
+
+@mixin yir-icon-am-restaurants {
+  @include yir-icons();
+  &:before {
+    content: '\f145';
+  }
+}
+
+@mixin yir-icon-am-playroom {
+  @include yir-icons();
+  &:before {
+    content: '\f146';
+  }
+}
+
+@mixin yir-icon-am-personal-roomsafe {
+  @include yir-icons();
+  &:before {
+    content: '\f147';
+  }
+}
+
+@mixin yir-icon-am-openbars {
+  @include yir-icons();
+  &:before {
+    content: '\f148';
+  }
+}
+
+@mixin yir-icon-am-tv {
+  @include yir-icons();
+  &:before {
+    content: '\f149';
+  }
+}
+
+@mixin yir-icon-am-lockers {
+  @include yir-icons();
+  &:before {
+    content: '\f14a';
+  }
+}
+
+@mixin yir-icon-am-kidspool {
+  @include yir-icons();
+  &:before {
+    content: '\f14b';
+  }
+}
+
+@mixin yir-icon-am-kidsplayground {
+  @include yir-icons();
+  &:before {
+    content: '\f14c';
+  }
+}
+
+@mixin yir-icon-am-infinitypool {
+  @include yir-icons();
+  &:before {
+    content: '\f14d';
+  }
+}
+
+@mixin yir-icon-am-climate-control {
+  @include yir-icons();
+  &:before {
+    content: '\f14e';
+  }
+}
+
+@mixin yir-icon-am-telephone {
+  @include yir-icons();
+  &:before {
+    content: '\f14f';
+  }
+}
+
+@mixin yir-icon-am-highspeed-wifi {
+  @include yir-icons();
+  &:before {
+    content: '\f150';
+  }
+}
+
+@mixin yir-icon-am-healthclub {
+  @include yir-icons();
+  &:before {
+    content: '\f151';
+  }
+}
+
+@mixin yir-icon-am-gym {
+  @include yir-icons();
+  &:before {
+    content: '\f152';
+  }
+}
+
+@mixin yir-icon-am-golf {
+  @include yir-icons();
+  &:before {
+    content: '\f153';
+  }
+}
+
+@mixin yir-icon-am-minibar {
+  @include yir-icons();
+  &:before {
+    content: '\f154';
+  }
+}
+
+@mixin yir-icon-am-experience {
+  @include yir-icons();
+  &:before {
+    content: '\f155';
+  }
+}
+
+@mixin yir-icon-am-eveningturndown {
+  @include yir-icons();
+  &:before {
+    content: '\f156';
+  }
+}
+
+@mixin yir-icon-am-drycleaning {
+  @include yir-icons();
+  &:before {
+    content: '\f157';
+  }
+}
+
+@mixin yir-icon-am-housekeeping {
+  @include yir-icons();
+  &:before {
+    content: '\f158';
+  }
+}
+
+@mixin yir-icon-am-conference-center {
+  @include yir-icons();
+  &:before {
+    content: '\f159';
+  }
+}
+
+@mixin yir-icon-am-complimentary-teacoffee {
+  @include yir-icons();
+  &:before {
+    content: '\f15a';
+  }
+}
+
+@mixin yir-icon-am-wheelchair-accessible-public-restrooms {
+  @include yir-icons();
+  &:before {
+    content: '\f15b';
+  }
+}
+
+@mixin yir-icon-am-spa {
+  @include yir-icons();
+  &:before {
+    content: '\f15c';
+  }
+}
+
+@mixin yir-icon-am-beach {
+  @include yir-icons();
+  &:before {
+    content: '\f15d';
+  }
+}
+
+@mixin yir-icon-am-toilets {
+  @include yir-icons();
+  &:before {
+    content: '\f142';
+  }
+}
+
+@mixin yir-icon-am-kidspool {
+  @include yir-icons();
+  &:before {
+    content: '\f14b';
+  }
+}
+
+@mixin yir-icon-am-self-catering-kitchen {
+  @include yir-icons();
+  &:before {
+    content: '\f15e';
+  }
+}
+
+@mixin yir-icon-am-pet-friendly {
+  @include yir-icons();
+  &:before {
+    content: '\f15f';
+  }
+}
+
+@mixin yir-icon-am-on-site-grocery-store {
+  @include yir-icons();
+  &:before {
+    content: '\f160';
+  }
+}
+
+@mixin yir-icon-am-merchandise-store {
+  @include yir-icons();
+  &:before {
+    content: '\f161';
+  }
+}
+
+@mixin yir-icon-am-family-rooms {
+  @include yir-icons();
+  &:before {
+    content: '\f162';
+  }
+}
+
+// Amenities list from travelbox ends here
+
+@mixin yir-icon-include {
+  @include yir-icons();
+  &:before {
+    content: '\f163';
+  }
+}
+@mixin yir-icon-not-include {
+  @include yir-icons();
+  &:before {
+    content: '\f164';
+  }
+}
+@mixin yir-icon-at-additional-cost {
+  @include yir-icons();
+  &:before {
+    content: '\f165';
+  }
+}
+@mixin yir-icon-external-link {
+  @include yir-icons();
+  &:before {
+    content: '\f166';
+  }
+}
+@mixin yir-icon-template-download {
+  @include yir-icons();
+  &:before {
+    content: '\f167';
+  }
+}
+@mixin yir-icon-map-direction {
+  @include yir-icons();
+  &:before {
+    content: '\f168';
+  }
+}
+@mixin yir-icon-tab-star {
+  @include yir-icons();
+  &:before {
+    content: '\f169';
+  }
+}
+@mixin yir-icon-tab-arrow {
+  @include yir-icons();
+  &:before {
+    content: '\f16a';
+  }
+}
+@mixin yir-icon-tab-plus {
+  @include yir-icons();
+  &:before {
+    content: '\f16b';
+  }
+}
+@mixin yir-icon-tab-minus {
+  @include yir-icons();
+  &:before {
+    content: '\f16c';
+  }
+}
+@mixin yir-icon-confetti {
+  @include yir-icons();
+  &:before {
+    content: '\f16d';
+  }
+}
+// YIR Icons mixins ends

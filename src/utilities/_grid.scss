@@ -1,0 +1,188 @@
+//==============FUNCTIONS ======================//
+
+/*
+    i/p -
+        $available-maxwidth : maximum available width
+        $column-width : width of 1 column
+        $col-count : column no who's width has to be calculated
+    o/p -
+        column width of desired column no in %
+    example -
+        $available-max-width = 13200 , $column-width = 12
+        avl width = 1320px = 100%
+        width of 1px in % = 100 *(1 / 1320px)
+        1 col-width in % = col-width * width of 1px in %
+        86px(col-width) in % = 86 * (100 *(1 / 1320px)) = 6.51515%
+*/
+@function _calculateColumnWidth($available-max-width, $column-width) {
+  $single-col-width: $column-width / $available-max-width * 100%;
+
+  @return $single-col-width;
+}
+
+/*
+    o/p -
+        column width of desired column no in %
+    i/p -
+        $breakpoint : viewport at which width needs to be calculated
+        $col-count : column no who's width has to be calculated
+*/
+@function getCoulmnWidth($col-count, $breakpoint) {
+  $width: 0;
+  $column-width: 0;
+  $column-gutter: 0;
+
+  //if tablet
+  @if $breakpoint == $small {
+    $column-width: _calculateColumnWidth($available-max-width-small, $column-width-small);
+
+    $column-gutter: getGutter($small);
+  } @else if $breakpoint == $medium {
+    $column-width: _calculateColumnWidth($available-max-width-medium, $column-width-medium);
+
+    $column-gutter: getGutter($medium);
+  } @else if $breakpoint == $large {
+    $column-width: _calculateColumnWidth($available-max-width-large, $column-width-large);
+
+    $column-gutter: getGutter($large);
+  } @else if $breakpoint == $extra-large {
+    $column-width: _calculateColumnWidth($available-max-width-extra-large, $column-width-extra-large);
+
+    $column-gutter: getGutter($extra-large);
+  }
+
+  /*
+        total-width-of-column = single-col-width(%) * total-column-count(if 3);
+        total-gutter = single-col-gutter(%) * 2(column-count -1);
+        total-width-of-column = total-width-of-column + total-gutter;
+    */
+  $width: $column-width * $col-count + $column-gutter * 2 * ($col-count - 1);
+
+  @return $width;
+}
+
+/*
+    o/p -
+        returns value of gutter for 1 column in % as per the viewport
+    i/p -
+        $breakpoint : breakpoint at which width needs to be calculated
+*/
+@function getGutter($breakpoint) {
+  $available-width: $available-max-width-small;
+  $column-gutter: $column-gutter-small;
+
+  @if $breakpoint == $medium {
+    $available-width: $available-max-width-medium;
+    $column-gutter: $column-gutter-medium;
+  } @else if $breakpoint == $large {
+    $available-width: $available-max-width-large;
+    $column-gutter: $column-gutter-large;
+  } @else if $breakpoint == $extra-large {
+    $available-width: $available-max-width-extra-large;
+    $column-gutter: $column-gutter-extra-large;
+  }
+
+  //similar to width calculation
+  $gutter: $column-gutter / $available-width * 100%;
+
+  @return $gutter;
+}
+
+@function _calculateOffset($col-count, $breakpoint) {
+  $offset-value: getCoulmnWidth($col-count, $breakpoint) + getGutter($breakpoint) * 2;
+
+  @return $offset-value;
+}
+
+// returns total width of viewport including margins(offset) on either sides
+@function getTotalWidth($available-max-width, $column-offset) {
+  $total-width: $available-max-width + $column-offset * 2;
+
+  @return $total-width;
+}
+
+// Returns max-width in % for a particular viewport
+@function calculatMaxWidth($breakpoint) {
+  $available-max-width: $available-max-width-small;
+  $column-offset: $column-offset-small;
+
+  @if $breakpoint == $medium {
+    $available-max-width: $available-max-width-medium;
+    $column-offset: $column-offset-medium;
+  } @else if $breakpoint == $large {
+    $available-max-width: $available-max-width-large;
+    $column-offset: $column-offset-large;
+  } @else if $breakpoint == $extra-large {
+    $available-max-width: $available-max-width-extra-large;
+    $column-offset: $column-offset-extra-large;
+  }
+
+  // total-width is available-max-width + margins(column-offset) on either sides
+  $total-width: getTotalWidth($available-max-width, $column-offset);
+  $max-width: $available-max-width / $total-width * 100;
+
+  @return $max-width;
+}
+
+//======================== MIXINS =====================//
+
+/*
+    o/p -
+        returns
+            $width: width of column w.r.t col-count
+            $margin: margin-left/right for a column
+    i/p -
+        $breakpoint : breakpoint at which width needs to be calculated
+        $col-count : value of column who's width has to be calculated
+*/
+@mixin column($col-count, $breakpoint, $isPadding: false) {
+  width: getCoulmnWidth($col-count, $breakpoint);
+
+  @if $breakpoint == $small {
+    max-width: #{$medium * getCoulmnWidth($col-count, $breakpoint) / 100%};
+  } @else if $breakpoint == $medium {
+    max-width: #{$large * getCoulmnWidth($col-count, $breakpoint) / 100%};
+  } @else if $breakpoint == $large {
+    max-width: #{$extra-large * getCoulmnWidth($col-count, $breakpoint) / 100%};
+  } @else {
+    max-width: 1296px;
+  }
+
+  @if $isPadding {
+    padding-left: getGutter($breakpoint);
+    padding-right: getGutter($breakpoint);
+  } @else {
+    margin-left: getGutter($breakpoint);
+    margin-right: getGutter($breakpoint);
+  }
+
+  margin: 0 auto;
+}
+
+/*
+    o/p -
+        returns
+            $margin: margin-left/right for a column
+    i/p -
+        $breakpoint : breakpoint at which width needs to be calculated
+*/
+@mixin gutter($breakpoint) {
+  margin-left: getGutter($breakpoint);
+  margin-right: getGutter($breakpoint);
+}
+
+/*
+    o/p -
+        returns
+            margin-left: left margin = width of 2 columns + gutter
+    i/p -
+        $breakpoint : breakpoint at which width needs to be calculated
+        $col-count : value of column who's width has to be calculated
+*/
+@mixin offset($col-count, $breakpoint, $margin-dir: left) {
+  @if $margin-dir == right {
+    margin-right: _calculateOffset($col-count, $breakpoint);
+  } @else {
+    margin-left: _calculateOffset($col-count, $breakpoint);
+  }
+}

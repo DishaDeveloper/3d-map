@@ -1,0 +1,114 @@
+@mixin redOrangeGradient {
+  @include gradientFlexi(to right, $primary-orange-color, $primary-red-color 56%, $primary-red-color 100%);
+}
+
+@mixin bluePurpleGradient {
+  @include gradientFlexi(215deg, $primary-navy-blue-color, $primary-purple-color);
+}
+
+@mixin pinkRedGradient {
+  @include gradientFlexi(206deg, $primary-pink-color, $primary-red-color);
+}
+
+//for festive season on ARTICLE LIST, COLOR TO FOLLOW FROM DESIGN , 315deg
+@mixin festiveRedGradient {
+  @include gradientFlexi(315deg, $primary-dark-red-color, $primary-light-red-color);
+}
+
+@mixin festiveGreenGradient {
+  @include gradientFlexi(315deg, $primary-dark-green-color, $primary-light-green-color,);
+}
+
+@mixin all-color-gradient {
+  @include gradientFlexi(
+    to right,
+    $primary-blue-color,
+    $primary-navy-blue-color 19%,
+    $primary-purple-color 36%,
+    $primary-pink-color 52%,
+    $primary-red-color 68%,
+    $primary-orange-color 83%,
+    $primary-yellow-color
+  );
+}
+
+@mixin redOrangeGradientTopToBottom {
+  @include gradientFlexi(217deg, $primary-red-color, $primary-orange-color);
+}
+
+@mixin redOrangeGradientTopToBottom-v1 {
+  @include gradientFlexi(211deg, $primary-red-color, $primary-red-color, $primary-orange-color);
+}
+
+@mixin purplePinkGradient {
+  @include gradientFlexi(to left, $primary-purple-color, $primary-pink-color);
+}
+
+@mixin redPinkGradient {
+  @include gradientFlexi(215deg, $primary-pink-color, $primary-red-color);
+}
+
+@mixin newsLetterGradient {
+  @include gradientFlexi(to bottom, #102d59, $dark-blue-2);
+}
+
+@mixin redPinkGradient205231 {
+  @include gradientFlexi(205deg, $primary-pink-color, $primary-red-color);
+  @include desktop {
+    @include gradientFlexi(231deg, $primary-pink-color, $primary-red-color);
+  }
+}
+
+@mixin redOrangeGradientLeftToRight {
+  @include gradientFlexi(to left, $primary-red-color, $primary-orange-color);
+}
+
+@mixin zoomedCarouselLeftToRight {
+  @include gradientFlexi(
+    to right,
+    $primary-blue-color,
+    $primary-navy-blue-color 19%,
+    $primary-purple-color 36%,
+    $primary-pink-color 52%,
+    $primary-red-color 68%,
+    $primary-orange-color 83%,
+    $primary-yellow-color
+  );
+}
+
+@mixin redPinkGradient-17deg {
+  @include gradientFlexi(17deg, $primary-red-color, $primary-pink-color);
+}
+
+@mixin redPinkGradient-36deg {
+  @include gradientFlexi(36deg, $primary-pink-color, $primary-red-color, $primary-red-color);
+}
+
+@mixin blueLightblueGradient {
+  @include gradientFlexi(44deg, $primary-blue-color, $primary-navy-blue-color);
+}
+
+@mixin imageVideoOverlayGradient {
+  @include gradientFlexi(to top, $black-color, rgba(0, 0, 0, 0.63) 38%, rgba(0, 0, 0, 0.5) 63%, $black-color);
+}
+
+@mixin purplePinkGradient {
+  @include gradientFlexi(197deg, $primary-purple-color, $primary-purple-color, $primary-pink-color);
+}
+
+@mixin blackOverlayGradient {
+  @include gradientFlexi(to bottom, rgba(0, 0, 0, 0), $black-color);
+}
+
+@mixin all-color-border-gradient {
+  @include borderImage(
+    to right,
+    $primary-blue-color,
+    $primary-navy-blue-color 19%,
+    $primary-purple-color 36%,
+    $primary-pink-color 52%,
+    $primary-red-color 68%,
+    $primary-orange-color 83%,
+    $primary-yellow-color
+  );
+}

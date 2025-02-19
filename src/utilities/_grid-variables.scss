@@ -1,0 +1,46 @@
+//==============VARIABLES======================//
+
+/*
+* Breakpoint
+* @ Variables
+*
+*/
+//mobile max
+$small: 360px;
+
+//tab
+$medium: 768px;
+
+//desktop
+$large: 1024px;
+
+//wide-screen
+$extra-large: 1200px;
+
+//susy grid params small
+$column-numbers-small: 24;
+$column-width-small: 15;
+$column-gutter-small: 0;
+$column-offset-small: 12;
+$available-max-width-small: 360;
+
+//susy grid params medium
+$column-numbers-medium: 24;
+$column-width-medium: 30;
+$column-gutter-medium: 0;
+$column-offset-medium: 12;
+$available-max-width-medium: 720;
+
+//susy grid params large
+$column-numbers-large: 24;
+$column-width-large: 41;
+$column-gutter-large: 0;
+$column-offset-large: 20;
+$available-max-width-large: 984;
+
+//susy grid params xl
+$column-numbers-extra-large: 24;
+$column-width-extra-large: 50;
+$column-gutter-extra-large: 0;
+$column-offset-extra-large: 60;
+$available-max-width-extra-large: 1200;

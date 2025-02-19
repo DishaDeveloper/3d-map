@@ -30,6 +30,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9"
+    "@babel/core": "^7.26.9",
+    "sass": "^1.85.0"
   }
 }
