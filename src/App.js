@@ -472,10 +472,10 @@ const App = () => {
                                           time: false,
                                         })
                                       }
-                                      onTouchStart={() =>
+                                      onPointerDown={() =>
                                         setInfo({
-                                          number: false,
-                                          time: !info.time,
+                                          number: !info.number,
+                                          time: false,
                                         })
                                       }
                                     >
@@ -491,7 +491,7 @@ const App = () => {
                                           time: !info.time,
                                         })
                                       }
-                                      onTouchStart={() =>
+                                      onPointerDown={() =>
                                         setInfo({
                                           number: false,
                                           time: !info.time,
@@ -508,8 +508,7 @@ const App = () => {
                                         (window.location.href =
                                           location?.bookTicket?.href)
                                       }
-                                      onTouchStart={() =>
-                                        IOSDevice() &&
+                                      onPointerDown={() =>
                                         (window.location.href =
                                           location?.bookTicket?.href)
                                       }
