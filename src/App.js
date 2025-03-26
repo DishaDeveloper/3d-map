@@ -485,6 +485,18 @@ const App = () => {
                                           time: !info.time,
                                         })
                                       }
+                                      onTouchStart={() =>
+                                        setInfo({
+                                          number: false,
+                                          time: !info.time,
+                                        })
+                                      }
+                                      onPointerDown={() =>
+                                        setInfo({
+                                          number: false,
+                                          time: !info.time,
+                                        })
+                                      }
                                     >
                                       clock
                                     </div>
@@ -493,6 +505,16 @@ const App = () => {
                                     <button
                                       className="cta-button primary"
                                       onClick={() =>
+                                        (window.location.href =
+                                          location?.bookTicket?.href)
+                                      }
+                                      onTouchStart={() =>
+                                        IOSDevice() &&
+                                        (window.location.href =
+                                          location?.bookTicket?.href)
+                                      }
+                                      onPointerDown={() =>
+                                        IOSDevice() &&
                                         (window.location.href =
                                           location?.bookTicket?.href)
                                       }
